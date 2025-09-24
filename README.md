@@ -2,6 +2,8 @@
 
 ## English Documentation 🇬🇧
 
+Saddly, the code was written by the AI.
+
 ### Project Overview
 A web application that allows users to browse data from the Monster Hunter World game using the MHW-DB API. The application displays information about monsters, weapons, armor, and items from the game.
 
@@ -11,6 +13,7 @@ A web application that allows users to browse data from the Monster Hunter World
 - Interactive tooltips
 - Modern glassmorphism design
 - Responsive layout
+- You can see it live under this Link: https://68d461eb7a01114ee7463586--glittery-beignet-20ad03.netlify.app
 
 ### Technical Stack
 - HTML5
@@ -22,6 +25,7 @@ A web application that allows users to browse data from the Monster Hunter World
 1. Clone the repository
 2. Open `index.html` in a web browser
 3. No additional installation required (static website)
+4. Or quickly you can see it here: https://68d461eb7a01114ee7463586--glittery-beignet-20ad03.netlify.app
 
 ### Usage
 1. Select a category from the dropdown menu
@@ -42,6 +46,7 @@ Aplikacja internetowa umożliwiająca przeglądanie danych z gry Monster Hunter 
 - Interaktywne podpowiedzi (tooltips)
 - Nowoczesny design w stylu glassmorphism
 - Responsywny układ
+- odwiedz stronę by zobaczyc jak wyglada projekt: https://68d461eb7a01114ee7463586--glittery-beignet-20ad03.netlify.app
 
 ### Technologie
 - HTML5
@@ -87,7 +92,7 @@ new-API-app/
 
 ### Autorzy
 - Projekt wykorzystuje API MHW-DB (https://docs.mhw-db.com)
-- Implementacja interfejsu użytkownika: [Twoje imię]
+- Implementacja interfejsu użytkownika: [Argot-Vierer & AI]
 
 ### Licencja
 Ten projekt jest dostępny na licencji MIT.
