@@ -1,0 +1,348 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #1a1a2e 100%);
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+h1 {
+    text-align: center;
+    color: #ffd700;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: linear-gradient(45deg, #ffd700, #ff8c00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+select, button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+select {
+    background-color: #333;
+    color: #fff;
+}
+
+button {
+    background: linear-gradient(45deg, #ffd700, #ff8c00);
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 8px;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ff8c00, #ffd700);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+#results-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(51, 51, 51, 0.8);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.card h3 {
+    color: #ffd700;
+    margin-top: 0;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+.monster-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.monster-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.monster-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.monster-images img:hover {
+    transform: scale(1.1);
+}
+
+.weapon-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin: 10px 0;
+}
+
+.weapon-model {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.weapon-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 5px;
+}
+
+.weapon-images img {
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.2));
+}
+
+.weapon-images img:hover {
+    transform: scale(1.1) rotate(2deg);
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4));
+}
+
+.weapon-details {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    transition: background 0.3s;
+}
+
+.weapon-details:hover {
+    background: rgba(0,0,0,0.2);
+}
+
+.weapon-details p {
+    margin: 5px 0;
+}
+
+.weapon-details strong {
+    color: #ffd700;
+}
+
+.search-input {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    width: 200px;
+}
+
+.search-input::placeholder {
+    color: #888;
+}
+
+.search-input:focus {
+    outline: 2px solid #ffd700;
+    background-color: #444;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    padding: 15px;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.page-btn {
+    padding: 8px 12px;
+    background: rgba(51, 51, 51, 0.8);
+    border: 1px solid #ffd700;
+    color: #fff;
+    min-width: 40px;
+    margin: 2px;
+    font-size: 14px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.page-btn.active {
+    background-color: #ffd700;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.page-btn:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+.page-btn.active:hover {
+    background-color: #ffd700;
+    transform: scale(1.1);
+}
+
+/* Zaktualizuj style dla przycisków nawigacji */
+.nav-btn {
+    background: #444;
+    padding: 8px 15px;
+    margin: 0 5px;
+}
+
+.nav-btn:hover {
+    background-color: #555;
+}
+
+.nav-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background-color: #333;
+}
+
+/* Dodaj animacje dla obrazków */
+.weapon-images img {
+    transition: all 0.3s ease;
+    filter: drop-shadow(0 0 5px rgba(255, 215, 0, 0.2));
+}
+
+.weapon-images img:hover {
+    transform: scale(1.1) rotate(2deg);
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4));
+}
+
+/* Dodaj scrollbar customowy */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ffd700, #ff8c00);
+    border-radius: 5px;
+}
+
+/* Dodaj animacje ładowania */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Dodaj na końcu pliku */
+.weapon-tooltip {
+    position: relative;
+    cursor: help;
+}
+
+.weapon-tooltip::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    border: 1px solid #ffd700;
+    border-radius: 8px;
+    font-size: 14px;
+    white-space: pre-wrap;
+    width: max-content;
+    max-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.weapon-tooltip:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
